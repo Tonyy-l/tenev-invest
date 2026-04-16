@@ -1,0 +1,10 @@
+<svg width="1200" height="900" viewBox="0 0 1200 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="900" fill="#1C1917"/>
+  <rect x="52" y="56" width="1096" height="788" rx="36" fill="#292524"/>
+  <path d="M0 694L286 596L474 630L736 512L1200 632V900H0V694Z" fill="#57534E"/>
+  <path d="M640 414H800L900 518H1030V582H984L958 654H768L744 582H640V414Z" fill="#FBBF24"/>
+  <circle cx="804" cy="642" r="48" fill="#1C1917"/>
+  <circle cx="946" cy="642" r="48" fill="#1C1917"/>
+  <path d="M604 320L724 416H652L548 348L604 320Z" fill="#D97706"/>
+  <text x="84" y="126" fill="#F5F5F4" font-family="Arial, sans-serif" font-size="42" font-weight="700">Подготовка на терен</text>
+</svg>

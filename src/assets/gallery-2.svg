@@ -1,0 +1,10 @@
+<svg width="1200" height="900" viewBox="0 0 1200 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="900" fill="#0C0A09"/>
+  <rect x="52" y="56" width="1096" height="788" rx="36" fill="#1C1917"/>
+  <path d="M0 742L208 676L482 690L766 580L1200 662V900H0V742Z" fill="#44403C"/>
+  <path d="M276 612C392 546 508 506 624 492C740 478 860 490 984 528V582C860 544 742 530 630 542C518 554 400 590 276 652V612Z" fill="#A16207"/>
+  <path d="M666 292H824L918 420H1036V494H972L940 568H784L754 494H666V292Z" fill="#FBBF24"/>
+  <circle cx="818" cy="560" r="44" fill="#0C0A09"/>
+  <circle cx="930" cy="560" r="44" fill="#0C0A09"/>
+  <text x="84" y="126" fill="#F5F5F4" font-family="Arial, sans-serif" font-size="42" font-weight="700">Изкоп за основи</text>
+</svg>
