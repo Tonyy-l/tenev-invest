@@ -1,4 +1,5 @@
 import AppLayout from "./components/layout/AppLayout";
+import { SharedSectionsBackground } from "./components/layout/Background";
 import Navbar from "./components/sections/Navbar";
 import Hero from "./components/sections/Hero";
 import Services from "./components/sections/Services";
@@ -9,7 +10,7 @@ import Footer from "./components/sections/Footer";
 import content from "./data/content.json";
 
 function App() {
-  const galleryImages = import.meta.glob("./assets/gallery-*.svg", {
+  const galleryImages = import.meta.glob("./assets/*.{jpg,jpeg,png,svg}", {
     eager: true,
     import: "default",
   });
@@ -22,6 +23,30 @@ function App() {
   const resolveAsset = (assetMap, fileName) =>
     assetMap[`./assets/${fileName}`] ?? "";
 
+  const extraGalleryItems = [
+    {
+      title: "Изкоп за улично трасе",
+      description:
+        "Работа по тесен изкоп в урбанизирана среда с прецизно оформяне на трасето и извозване на материала.",
+      alt: "Комбиниран багер работи по изкоп за улично трасе между жилищни сгради",
+      image: "Image (4).jpg",
+    },
+    {
+      title: "Товарене на инертни материали",
+      description:
+        "Челен товарач зарежда самосвал директно на обекта за бърз транспорт на насипни материали.",
+      alt: "Челен товарач пълни самосвал с инертни материали на строителен обект",
+      image: "Image (6).jpg",
+    },
+    {
+      title: "Дълбок изкоп с гофрирана тръба",
+      description:
+        "Изкоп за подземна инфраструктура с оформени стени и подготовка за полагане на тръбни връзки.",
+      alt: "Дълбок машинен изкоп с положена гофрирана тръба и багер на обекта",
+      image: "Image (5).jpg",
+    },
+  ];
+
   const services = content.services.map((service) => ({
     ...service,
     iconSrc: resolveAsset(iconImages, service.icon),
@@ -32,7 +57,7 @@ function App() {
     iconSrc: resolveAsset(iconImages, advantage.icon),
   }));
 
-  const gallery = content.gallery.map((item) => ({
+  const gallery = [...content.gallery, ...extraGalleryItems].map((item) => ({
     ...item,
     imageSrc: resolveAsset(galleryImages, item.image),
   }));
@@ -43,13 +68,14 @@ function App() {
 
       <main>
         <Hero data={content.hero} />
-        <Services data={content.servicesSection} items={services} />
-        <Advantages data={content.advantagesSection} items={advantages} />
-        <Gallery data={content.gallerySection} items={gallery} />
-        <Contact data={content.contactSection} contact={content.contact} />
+        <SharedSectionsBackground>
+          <Services data={content.servicesSection} items={services} />
+          <Gallery data={content.gallerySection} items={gallery} />
+          <Advantages data={content.advantagesSection} items={advantages} />
+          <Contact data={content.contactSection} contact={content.contact} />
+          <Footer data={content.footer} contact={content.contact} />
+        </SharedSectionsBackground>
       </main>
-
-      <Footer data={content.footer} contact={content.contact} />
     </AppLayout>
   );
 }
