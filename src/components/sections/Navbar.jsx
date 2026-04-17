@@ -164,10 +164,10 @@ function Navbar({ data }) {
               <div className="mt-3 grid gap-2 border-t border-white/10 pt-3">
                 <button
                   type="button"
-                  className="rounded-2xl border border-[#c4975b]/35 bg-[#c4975b]/10 px-4 py-3 text-left text-base font-semibold text-[#f2dfc4] transition hover:border-[#c4975b] hover:bg-[#c4975b]/18 hover:text-white"
+                  className="inline-flex w-full items-center justify-center rounded-2xl border border-[#c4975b]/35 bg-[#c4975b]/10 px-4 py-3 text-base font-semibold text-[#f2dfc4] transition hover:border-[#c4975b] hover:bg-[#c4975b]/18 hover:text-white"
                   onClick={openCallPopup}
                 >
-                  {callCtaLabel}
+                  <span className="w-full text-center">{callCtaLabel}</span>
                 </button>
                 <a
                   href={inspectionFormHref}
