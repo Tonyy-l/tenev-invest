@@ -28,6 +28,7 @@ function Hero({ data }) {
             {data.subtitle}
           </p>
 
+
           <div className="mt-12.5 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
             <a
               href={data.primaryButtonHref}
