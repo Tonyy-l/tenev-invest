@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useRef, useState } from "react";
 import { scrollToSection } from "../../utils/scrollToSection";
 
 function Gallery({ data, items }) {
@@ -42,16 +42,6 @@ function Gallery({ data, items }) {
 
     goToPreviousSlide();
   };
-
-  useEffect(() => {
-    if (!totalSlides) return;
-
-    const interval = setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % totalSlides);
-    }, 3000);
-
-    return () => clearInterval(interval);
-  }, [totalSlides]);
 
   return (
     <section id="gallery" className="relative scroll-mt-32">
