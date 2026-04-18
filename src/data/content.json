@@ -6,11 +6,29 @@
     "ctaLabel": "Заяви оглед",
     "ctaHref": "#contact",
     "links": [
-      { "label": "Услуги", "href": "#services" },
-      { "label": "Предимства", "href": "#advantages" },
-      { "label": "Галерия", "href": "#gallery" },
-      { "label": "Контакт", "href": "#contact" }
-    ]
+      {
+        "label": "Услуги",
+        "href": "#services"
+      },
+      {
+        "label": "Предимства",
+        "href": "#advantages"
+      },
+      {
+        "label": "Галерия",
+        "href": "#gallery"
+      },
+      {
+        "label": "Контакт",
+        "href": "#contact"
+      }
+    ],
+    "callCtaLabel": "\u041e\u0431\u0430\u0434\u0438 \u0441\u0435 \u0441\u0435\u0433\u0430",
+    "callModalEyebrow": "\u0411\u044a\u0440\u0437\u0430 \u0432\u0440\u044a\u0437\u043a\u0430",
+    "callModalTitle": "\u0421\u043f\u0435\u0448\u0435\u043d \u043e\u0433\u043b\u0435\u0434\u003f \u041e\u0431\u0430\u0434\u0435\u0442\u0435 \u0441\u0435 \u0441\u0435\u0433\u0430.",
+    "callModalDescription": "\u0417\u0430 \u0431\u044a\u0440\u0437\u0430 \u0440\u0435\u0430\u043a\u0446\u0438\u044f \u0438 \u0443\u0442\u043e\u0447\u043d\u044f\u0432\u0430\u043d\u0435 \u043d\u0430 \u043e\u0431\u0435\u043a\u0442\u0430 \u0441\u0435 \u0441\u0432\u044a\u0440\u0436\u0435\u0442\u0435 \u0441 \u043d\u0430\u0441 \u0434\u0438\u0440\u0435\u043a\u0442\u043d\u043e \u043f\u043e \u0442\u0435\u043b\u0435\u0444\u043e\u043d\u0430.",
+    "callModalButtonLabel": "\u041e\u0431\u0430\u0434\u0438 \u0441\u0435:",
+    "callModalCloseLabel": "\u0417\u0430\u0442\u0432\u043e\u0440\u0438"
   },
   "hero": {
     "smallTitle": "Изкопни и строителни услуги",
@@ -22,9 +40,18 @@
     "secondaryButtonHref": "#services",
     "statsTitle": "Работим бързо, сигурно и по план",
     "stats": [
-      { "value": "12+", "label": "години опит на терен" },
-      { "value": "250+", "label": "завършени обекта" },
-      { "value": "24/7", "label": "готовност за спешни заявки" }
+      {
+        "value": "12+",
+        "label": "години опит на терен"
+      },
+      {
+        "value": "250+",
+        "label": "завършени обекта"
+      },
+      {
+        "value": "24/7",
+        "label": "готовност за спешни заявки"
+      }
     ]
   },
   "servicesSection": {
@@ -75,7 +102,6 @@
     "smallTitle": "Наши обекти",
     "title": "Реална техника и реална работа на терен",
     "description": "Подбрахме част от дейностите, които изпълняваме на различни обекти, за да добиете ясна представа за мащаба и вида на работата."
-   
   },
   "gallery": [
     {
@@ -126,7 +152,7 @@
     {
       "image": "snimka1.jpg"
     },
-     {
+    {
       "image": "backgroundImg.jpg"
     }
   ],

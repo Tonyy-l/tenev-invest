@@ -5,8 +5,6 @@ function Navbar({ data }) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isCallPopupOpen, setIsCallPopupOpen] = useState(false);
   const [activeHref, setActiveHref] = useState("");
-  const inspectionFormHref = "#inspection-form";
-  const callCtaLabel = data.callCtaLabel ?? "Обади се сега";
 
   const closeMenu = () => setIsMenuOpen(false);
   const openCallPopup = () => {
@@ -120,18 +118,11 @@ function Navbar({ data }) {
             <div className="flex items-center gap-2 sm:gap-3">
               <button
                 type="button"
-                className="hidden items-center rounded-full border border-[#c4975b]/35 bg-[#c4975b]/10 px-4 py-2 text-base font-semibold text-[#f2dfc4] transition hover:border-[#c4975b] hover:bg-[#c4975b]/18 hover:text-white lg:inline-flex"
+                className="hidden min-h-12 items-center justify-center rounded-full border border-[#c4975b] bg-[#c4975b] px-7 py-3 text-base font-semibold text-[#111111] transition hover:bg-[#d2a566] sm:inline-flex"
                 onClick={openCallPopup}
               >
-                {callCtaLabel}
+                {data.callCtaLabel}
               </button>
-              <a
-                href={inspectionFormHref}
-                onClick={handleSectionClick(inspectionFormHref)}
-                className="hidden h-11 items-center rounded-full bg-[#D2A566] px-4 text-base font-semibold text-[#171614] transition hover:bg-[#c4975b] sm:inline-flex lg:px-5"
-              >
-                {data.ctaLabel}
-              </a>
               <button
                 type="button"
                 aria-expanded={isMenuOpen}
@@ -164,18 +155,11 @@ function Navbar({ data }) {
               <div className="mt-3 grid gap-2 border-t border-white/10 pt-3">
                 <button
                   type="button"
-                  className="inline-flex w-full items-center justify-center rounded-2xl border border-[#c4975b]/35 bg-[#c4975b]/10 px-4 py-3 text-base font-semibold text-[#f2dfc4] transition hover:border-[#c4975b] hover:bg-[#c4975b]/18 hover:text-white"
+                  className="inline-flex min-h-12 items-center justify-center rounded-full border border-[#c4975b] bg-[#c4975b] px-7 py-3 text-base font-semibold text-[#111111] transition hover:bg-[#d2a566]"
                   onClick={openCallPopup}
                 >
-                  <span className="w-full text-center">{callCtaLabel}</span>
+                  <span className="w-full text-center">{data.callCtaLabel}</span>
                 </button>
-                <a
-                  href={inspectionFormHref}
-                  onClick={handleSectionClick(inspectionFormHref, true)}
-                  className="inline-flex items-center justify-center rounded-2xl bg-[#D2A566] px-4 py-3 text-base font-semibold text-[#171614] transition hover:bg-[#c4975b]"
-                >
-                  {data.ctaLabel}
-                </a>
               </div>
             </div>
           ) : null}
@@ -193,20 +177,16 @@ function Navbar({ data }) {
 
           <div className="relative z-10 w-full max-w-md rounded-[28px] border border-[#4b4338] bg-[#171614] p-6 text-white shadow-[0_24px_80px_rgba(0,0,0,0.4)]">
             <p className="text-xs font-semibold uppercase tracking-[0.28em] text-[#c4975b]">
-              Бърза връзка
+              {data.callModalEyebrow}
             </p>
-            <h3 className="mt-4 text-3xl font-bold leading-tight">
-              Спешен оглед? Обадете се сега.
-            </h3>
-            <p className="mt-4 text-sm leading-7 text-white/72">
-              За бърза реакция и уточняване на обекта се свържете с нас директно по телефона.
-            </p>
+            <h3 className="mt-4 text-3xl font-bold leading-tight">{data.callModalTitle}</h3>
+            <p className="mt-4 text-sm leading-7 text-white/72">{data.callModalDescription}</p>
 
             <a
               href={`tel:${data.phoneRaw}`}
               className="mt-6 inline-flex w-full items-center justify-center rounded-full bg-[#c4975b] px-6 py-4 text-base font-semibold text-[#171614] transition hover:bg-[#d2a566]"
             >
-              Обади се: {data.phoneLabel}
+              {data.callModalButtonLabel} {data.phoneLabel}
             </a>
 
             <button
@@ -214,7 +194,7 @@ function Navbar({ data }) {
               className="mt-3 inline-flex w-full items-center justify-center rounded-full border border-white/12 bg-white/4 px-6 py-4 text-base font-semibold text-white/82 transition hover:bg-white/8"
               onClick={closeCallPopup}
             >
-              Затвори
+              {data.callModalCloseLabel}
             </button>
           </div>
         </div>

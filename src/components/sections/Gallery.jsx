@@ -99,7 +99,24 @@ function Gallery({ data, items }) {
                     className="h-72 w-full object-cover sm:h-80 lg:h-[420px]"
                   />
 
-                  <div className="absolute inset-0 flex items-end bg-gradient-to-t from-black/62 via-black/18 to-transparent">
+                  {totalSlides > 1 ? (
+                    <div className="absolute inset-0 z-10 flex">
+                      <button
+                        type="button"
+                        onClick={goToPreviousSlide}
+                        className="h-full w-1/2 cursor-pointer bg-transparent"
+                        aria-label="Previous slide"
+                      />
+                      <button
+                        type="button"
+                        onClick={goToNextSlide}
+                        className="h-full w-1/2 cursor-pointer bg-transparent"
+                        aria-label="Next slide"
+                      />
+                    </div>
+                  ) : null}
+
+                  <div className="pointer-events-none absolute inset-0 z-20 flex items-end bg-gradient-to-t from-black/62 via-black/18 to-transparent">
                     <div className="p-4 text-white sm:p-5">
                       <p className="text-base font-semibold sm:text-lg">{item.title}</p>
                       <p className="mt-1 text-sm text-white/80">{item.description}</p>

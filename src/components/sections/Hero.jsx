@@ -17,18 +17,18 @@ function Hero({ data }) {
 
       <div className="relative z-10 mx-auto flex min-h-[calc(100svh+2rem)] max-w-7xl items-center px-4 pb-12 pt-24 text-white sm:px-6 sm:pb-16 sm:pt-28 lg:px-8 lg:pb-18 lg:pt-28">
         <div className="max-w-3xl">
-          <img src={logo} alt={data.title} className="mb-4 h-12 w-auto sm:h-16 lg:h-[5.5rem]" />
-          <p className="mb-4 text-xs font-semibold uppercase tracking-[0.28em] text-white/68 sm:text-sm">
+          <img src={logo} alt={data.title} className="mb-4 h-52 w-auto sm:h-16 lg:h-[5.5rem]" />
+          <p className="mb-6 text-xs font-semibold uppercase tracking-[0.28em] text-white/68 sm:text-sm">
             {data.smallTitle}
           </p>
           <h1 className="max-w-[14ch] text-[1.75rem] font-bold leading-[1.08] text-white sm:text-[2.85rem] lg:text-[4rem]">
             {data.title}
           </h1>
-          <p className="mt-5 max-w-2xl text-sm leading-7 text-white/78 sm:text-base lg:text-[1.05rem]">
+          <p className="mt-8 max-w-2xl text-sm leading-7 text-white/78 sm:text-base lg:text-[1.05rem]">
             {data.subtitle}
           </p>
 
-          <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
+          <div className="mt-12.5 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
             <a
               href={data.primaryButtonHref}
               onClick={(event) => {
