@@ -148,12 +148,12 @@ export default function InspectionForm({ data }) {
     >
       <fieldset disabled={isSubmitting} className="grid h-full gap-5">
         <div className="border-b border-black/8 pb-4">
-          <p className="text-xs font-semibold uppercase tracking-[0.24em] text-[#81684a] sm:text-sm">
+          <p className="text-sm font-semibold uppercase tracking-[0.18em] text-[#81684a] sm:text-base">
             Форма за запитване
           </p>
-          <p className="mt-2 text-sm leading-6 text-[#5f5142]">
+          <h2 className="mt-4 max-w-xl text-2xl font-bold leading-tight text-[#181512] sm:text-4xl">
             Попълнете данните и ще ви върнем обаждане възможно най-скоро.
-          </p>
+          </h2>
         </div>
 
         <div className="sr-only" aria-hidden="true">
@@ -216,7 +216,7 @@ export default function InspectionForm({ data }) {
         <button
           type="submit"
           disabled={isSubmitting}
-          className="inline-flex min-h-12 w-full items-center justify-center gap-2 rounded-full bg-[#1b1a18] px-6 py-3 text-base font-semibold text-white transition hover:bg-[#c4975b] focus:outline-none focus:ring-4 focus:ring-[#c4975b]/25 disabled:cursor-not-allowed disabled:opacity-70"
+          className="mt-6 inline-flex min-h-14 w-full items-center justify-center gap-2 rounded-full border border-[#2e2923] bg-[#1b1a18] px-6 py-3 text-base font-semibold text-white shadow-[0_16px_30px_rgba(27,26,24,0.22)] transition duration-200 hover:-translate-y-0.5 hover:border-[#c4975b]/60 hover:bg-[#c4975b] hover:shadow-[0_18px_34px_rgba(196,151,91,0.28)] focus:outline-none focus:ring-4 focus:ring-[#c4975b]/25 disabled:cursor-not-allowed disabled:opacity-70"
         >
           {isSubmitting ? (
             <>

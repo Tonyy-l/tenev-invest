@@ -6,7 +6,7 @@ function Contact({ data, contact }) {
       <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="grid items-stretch gap-6 lg:grid-cols-[0.92fr_1.08fr] lg:gap-8">
           <div className="h-full rounded-[30px] border border-[#d7cdbf] bg-[linear-gradient(180deg,rgba(244,239,230,0.96),rgba(232,224,214,0.92))] p-6 shadow-[0_18px_46px_rgba(56,44,30,0.08)] sm:p-8">
-            <p className="text-xs font-semibold uppercase tracking-[0.24em] text-[#81684a] sm:text-sm">
+            <p className="text-sm font-semibold uppercase tracking-[0.18em] text-[#81684a] sm:text-base">
               {data.smallTitle}
             </p>
             <h2 className="mt-4 max-w-[14ch] text-2xl font-bold leading-tight text-[#181512] sm:text-4xl">

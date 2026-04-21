@@ -1,4 +1,4 @@
-import heroImage from "../../assets/backgroundImg.jpg";
+import heroImage from "../../assets/BackgroundImgN.jpg";
 import logo from "../../assets/logotransperant.png";
 import { scrollToSection } from "../../utils/scrollToSection";
 
@@ -7,7 +7,7 @@ function Hero({ data }) {
     <section id="hero" className="relative isolate min-h-[calc(100svh+2rem)] scroll-mt-32 overflow-hidden">
       <div
         className="absolute inset-0 -z-20 bg-cover bg-center bg-no-repeat motion-safe:animate-[heroZoom_1.8s_ease-out_forwards]"
-        style={{ backgroundImage: `url(${heroImage})` }}
+        style={{ backgroundImage: `url(${heroImage})`, backgroundPosition: "center 30%" }}
       />
       <div className="absolute inset-0 -z-10 bg-[linear-gradient(96deg,rgba(8,8,8,0.94)_0%,rgba(8,8,8,0.86)_34%,rgba(10,10,10,0.66)_62%,rgba(12,12,12,0.42)_100%)]" />
       <div className="absolute inset-0 -z-10 bg-[linear-gradient(180deg,rgba(0,0,0,0.24)_0%,rgba(0,0,0,0.10)_26%,rgba(0,0,0,0.22)_100%)]" />
