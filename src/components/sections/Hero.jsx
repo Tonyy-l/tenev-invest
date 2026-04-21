@@ -1,4 +1,4 @@
-import heroImage from "../../assets/BackgroundImgN.jpg";
+import heroImage from "../../assets/backgroundImgN.jpg";
 import logo from "../../assets/logotransperant.png";
 import { scrollToSection } from "../../utils/scrollToSection";
 
