@@ -1,4 +1,10 @@
-name = "tenev-invest-contact-api"
+name = "tenev-invest"
 main = "worker/index.js"
 compatibility_date = "2026-06-17"
 
+[assets]
+directory = "./dist"
+binding = "ASSETS"
+
+[vars]
+VITE_CONTACT_ENDPOINT = "https://tenev-invest-contact-api.tony123456.workers.dev"
