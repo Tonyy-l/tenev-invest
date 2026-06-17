@@ -1,4 +1,0 @@
-name = "tenev-invest-contact-api"
-main = "worker/index.js"
-compatibility_date = "2026-06-17"
-
