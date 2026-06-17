@@ -1,0 +1,11 @@
+<svg width="1200" height="900" viewBox="0 0 1200 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="900" fill="#1C1917"/>
+  <rect x="52" y="56" width="1096" height="788" rx="36" fill="#0C0A09"/>
+  <path d="M0 712L298 642L522 664L784 566L1200 630V900H0V712Z" fill="#3F3F46"/>
+  <rect x="602" y="470" width="260" height="98" rx="20" fill="#FBBF24"/>
+  <rect x="854" y="506" width="162" height="62" rx="18" fill="#D97706"/>
+  <circle cx="684" cy="612" r="46" fill="#1C1917"/>
+  <circle cx="930" cy="612" r="46" fill="#1C1917"/>
+  <path d="M362 370L514 430L450 510L300 450L362 370Z" fill="#F59E0B"/>
+  <text x="84" y="126" fill="#F5F5F4" font-family="Arial, sans-serif" font-size="42" font-weight="700">Транспорт на материали</text>
+</svg>
