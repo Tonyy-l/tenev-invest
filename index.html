@@ -4,21 +4,131 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/jpeg" href="/logo.jpg" />
-    <title>Тенев Инвест Груп | Багери под наем</title>
-    
+    <title>Tenev Invest Group | Excavator Rental</title>
+    <style>
+      #boot-loader {
+        position: fixed;
+        inset: 0;
+        z-index: 9999;
+        display: grid;
+        place-items: center;
+        background:
+          radial-gradient(circle at 50% 35%, rgba(196, 151, 91, 0.16), transparent 22%),
+          radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.36), transparent 40%),
+          linear-gradient(180deg, #f7f1e8 0%, #ece3d5 48%, #dfcfb7 100%);
+        transition: opacity 0.25s ease, visibility 0.25s ease;
+      }
+
+      #boot-loader-inner {
+        display: grid;
+        place-items: center;
+        position: relative;
+        isolation: isolate;
+      }
+
+      #boot-loader-inner::before {
+        content: "";
+        position: absolute;
+        inset: -32px -64px;
+        border-radius: 999px;
+        background: radial-gradient(circle, rgba(196, 151, 91, 0.22) 0%, rgba(196, 151, 91, 0.08) 38%, transparent 72%);
+        filter: blur(8px);
+        animation: haloPulse 3.2s ease-in-out infinite;
+        z-index: -1;
+      }
+
+      #boot-loader-inner::after {
+        content: "";
+        position: absolute;
+        inset: 10px;
+        border-radius: 999px;
+        border: 1px solid rgba(116, 92, 65, 0.08);
+        box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.55);
+        z-index: -1;
+      }
+
+      #boot-loader-logo {
+        width: min(680px, 94vw);
+        height: auto;
+        object-fit: contain;
+        filter:
+          drop-shadow(0 22px 34px rgba(72, 52, 28, 0.16))
+          drop-shadow(0 0 18px rgba(196, 151, 91, 0.12));
+        animation:
+          logoReveal 1.15s cubic-bezier(0.18, 0.82, 0.18, 1) both,
+          logoFloat 3.6s ease-in-out 1.15s infinite;
+      }
+
+      .is-loaded #boot-loader {
+        opacity: 0;
+        visibility: hidden;
+      }
+
+      @keyframes logoFloat {
+        0%,
+        100% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(-4px);
+        }
+      }
+
+      @keyframes logoReveal {
+        0% {
+          opacity: 0;
+          transform: scale(0.5) translateY(24px) rotate(-7deg);
+          filter: blur(18px) drop-shadow(0 0 0 rgba(0, 0, 0, 0));
+        }
+        58% {
+          opacity: 1;
+          transform: scale(1.05) translateY(-2px) rotate(1deg);
+          filter:
+            blur(0)
+            drop-shadow(0 22px 34px rgba(72, 52, 28, 0.16))
+            drop-shadow(0 0 18px rgba(196, 151, 91, 0.12));
+        }
+        100% {
+          opacity: 1;
+          transform: scale(1) translateY(0) rotate(0);
+          filter:
+            blur(0)
+            drop-shadow(0 22px 34px rgba(72, 52, 28, 0.16))
+            drop-shadow(0 0 18px rgba(196, 151, 91, 0.12));
+        }
+      }
+
+      @keyframes haloPulse {
+        0%,
+        100% {
+          opacity: 0.7;
+          transform: scale(1);
+        }
+        50% {
+          opacity: 1;
+          transform: scale(1.04);
+        }
+      }
+
+    </style>
+    <script>
+      window.addEventListener("load", function () {
+        document.documentElement.classList.add("is-loaded");
+      });
+    </script>
     <meta
       name="description"
-      content="Тенев Инвест Груп предлага багери под наем, изкопни услуги, теренна подготовка и транспорт за обекти в България."
+      content="Tenev Invest Group offers excavator rental, earthworks, terrain preparation, and transport services."
     />
     <meta
       name="keywords"
-      content="багер под наем, изкопни услуги, строителна техника, теренна подготовка, Тенев Инвест Груп"
+      content="excavator rental, earthworks, construction machinery, terrain preparation, Tenev Invest Group"
     />
-    <meta name="author" content="Тенев Инвест Груп" />
-    <meta property="og:title" content="Тенев Инвест Груп | Багери под наем" />
+    <meta name="author" content="Tenev Invest Group" />
+    <meta property="og:title" content="Tenev Invest Group | Excavator Rental" />
     <meta
       property="og:description"
-      content="Надеждни машини и екип за изкопи, почистване на терени и строителни дейности."
+      content="Reliable machinery and crew for earthworks, site clearing, and construction tasks."
     />
     <meta property="og:type" content="website" />
     <meta property="og:image" content="/logo.jpg" />
@@ -27,7 +137,12 @@
     <meta name="twitter:image" content="/logo.jpg" />
   </head>
   <body>
+    <div id="boot-loader" aria-hidden="true">
+      <div id="boot-loader-inner">
+        <img id="boot-loader-logo" src="/logotransperant.png" alt="" />
+      </div>
+    </div>
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
   </body>
-  </html>
+</html>
